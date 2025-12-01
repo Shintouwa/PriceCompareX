@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals - PriceCompareX</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar glass">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="PriceCompareX"
+                onerror="this.src='https://via.placeholder.com/40'">
+            <span>PriceCompareX</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('deals') }}" class="active">Deals</a>
+            <a href="#">Trending</a>
+            <a href="{{ url_for('login') }}" class="btn-primary">Login</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1 class="animate-fade-up">Today's <span class="gradient-text">Best Deals</span></h1>
+            <p class="animate-fade-up delay-1">Hand-picked discounts and price drops just for you.</p>
+        </div>
+    </header>
+
+    <section class="deals-section">
+        <div class="filters glass animate-fade-up delay-2">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Electronics</button>
+            <button class="filter-btn">Fashion</button>
+            <button class="filter-btn">Home</button>
+            <button class="filter-btn">Beauty</button>
+        </div>
+
+        <div class="products-grid animate-fade-up delay-3">
+            <!-- Mock Product 1 -->
+            <div class="product-card glass">
+                <div class="badge">-25%</div>
+                <div class="product-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="product-info">
+                    <h3>iPhone 15 Pro</h3>
+                    <p class="store">Amazon</p>
+                    <div class="price-row">
+                        <span class="price">$999</span>
+                        <span class="original-price">$1300</span>
+                    </div>
+                    <button class="btn-view">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Mock Product 2 -->
+            <div class="product-card glass">
+                <div class="badge hot">HOT</div>
+                <div class="product-image">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Sony WH-1000XM5</h3>
+                    <p class="store">BestBuy</p>
+                    <div class="price-row">
+                        <span class="price">$298</span>
+                        <span class="original-price">$399</span>
+                    </div>
+                    <button class="btn-view">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Mock Product 3 -->
+            <div class="product-card glass">
+                <div class="badge">-40%</div>
+                <div class="product-image">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="product-info">
+                    <h3>MacBook Air M2</h3>
+                    <p class="store">B&H Photo</p>
+                    <div class="price-row">
+                        <span class="price">$899</span>
+                        <span class="original-price">$1199</span>
+                    </div>
+                    <button class="btn-view">View Deal</button>
+                </div>
+            </div>
+
+            <!-- Mock Product 4 -->
+            <div class="product-card glass">
+                <div class="badge">-15%</div>
+                <div class="product-image">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="product-info">
+                    <h3>PS5 Console</h3>
+                    <p class="store">Walmart</p>
+                    <div class="price-row">
+                        <span class="price">$449</span>
+                        <span class="original-price">$499</span>
+                    </div>
+                    <button class="btn-view">View Deal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 PriceCompareX. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
