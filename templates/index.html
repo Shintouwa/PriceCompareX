@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceCompareX - Smart Product Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar glass">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="PriceCompareX"
+                onerror="this.src='https://via.placeholder.com/40'">
+            <span>PriceCompareX</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Deals</a>
+            <a href="#">Trending</a>
+            <a href="{{ url_for('login') }}" class="btn-primary">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="animate-fade-up">Find the <span class="gradient-text">Lowest Price</span> <br>Every Single Time.
+            </h1>
+            <p class="animate-fade-up delay-1">Compare prices across thousands of stores, track history, and get smart
+                buy recommendations.</p>
+
+            <div class="search-container glass animate-fade-up delay-2">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search for products (e.g., iPhone 15, Sony XM5)...">
+                <button class="btn-search">Search</button>
+            </div>
+
+            <div class="hero-stats animate-fade-up delay-3">
+                <div class="stat-item">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Stores</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Real-time Updates</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card glass card-1">
+                <div class="card-icon"><i class="fas fa-tag"></i></div>
+                <div class="card-info">
+                    <span>Best Deal</span>
+                    <strong>$999 <span class="strike">$1200</span></strong>
+                </div>
+            </div>
+            <div class="floating-card glass card-2">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="card-info">
+                    <span>Price Drop</span>
+                    <strong>-15% Today</strong>
+                </div>
+            </div>
+            <div class="glow-effect"></div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2 class="section-title">Why Use PriceCompareX?</h2>
+        <div class="features-grid">
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fas fa-bolt"></i></div>
+                <h3>Real-time Comparison</h3>
+                <p>Instantly compare prices from Amazon, BestBuy, Walmart, and more in one click.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fas fa-history"></i></div>
+                <h3>Price History</h3>
+                <p>View historical price charts to know if it's the right time to buy or wait.</p>
+            </div>
+            <div class="feature-card glass">
+                <div class="icon-box"><i class="fas fa-bell"></i></div>
+                <h3>Smart Alerts</h3>
+                <p>Set price targets and get notified instantly when your favorite products go on sale.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 PriceCompareX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple interaction for search
+        document.querySelector('.btn-search').addEventListener('click', () => {
+            const query = document.querySelector('input').value;
+            if (query) {
+                alert('Search functionality coming soon! You searched for: ' + query);
+            }
+        });
+    </script>
+</body>
+
+</html>

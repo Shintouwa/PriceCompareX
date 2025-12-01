@@ -105,9 +105,9 @@ const SignIn = () => {
                 </div>
 
                 <p className="toggle-auth">
-                    {isSignUp ? 'Already have an account?' : "Don't have an account?"}
+                    {isSignUp ? 'Already have an account?' : 'Not joined us yet?'}
                     <span onClick={() => setIsSignUp(!isSignUp)}>
-                        {isSignUp ? ' Sign In' : ' Sign Up'}
+                        {isSignUp ? ' Sign In!' : ' register now!'}
                     </span>
                 </p>
             </div>
