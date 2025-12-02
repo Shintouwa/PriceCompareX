@@ -117,6 +117,43 @@
     <footer class="footer">
         <p>&copy; 2025 PriceCompareX. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Category Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.textContent.trim();
+
+                products.forEach(product => {
+                    // For demo purposes, we'll just show all products
+                    // In a real app, you'd check product data attributes
+                    product.style.display = 'flex';
+                    product.classList.add('animate-fade-up');
+
+                    // Reset animation
+                    setTimeout(() => {
+                        product.classList.remove('animate-fade-up');
+                    }, 800);
+                });
+            });
+        });
+
+        // View Deal Interaction
+        document.querySelectorAll('.btn-view').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const product = this.closest('.product-card').querySelector('h3').textContent;
+                alert(`Redirecting to best deal for: ${product}`);
+            });
+        });
+    </script>
 </body>
 
 </html>
